@@ -119,7 +119,7 @@ func mine(i uint64, c *client) {
 		}
 
 		if current.Cmp(bigZero) == 0 || current.Cmp(bigOne) == 0 || current.Cmp(bigTwo) == 0 || current.Cmp(bigFour) == 0 {
-			// continue
+			continue
 		}
 
 		c.logger.Printf("counter example found. initial value: %s, cycle start: %s, path length: %d", initial.String(), current.String(), len(seen))
